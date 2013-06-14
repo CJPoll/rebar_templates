@@ -1,0 +1,6 @@
+{variables, [
+		{name, "template"},
+		{restart, "one_for_one"},
+		{child, "achild"}
+	]}.
+{template, "supervisor.erl", "./{{name}}_sup.erl"}.
