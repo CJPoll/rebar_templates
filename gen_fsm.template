@@ -1,0 +1,3 @@
+{variables, [
+		{name, "template"}]}.
+{template, "gen_fsm.erl", "./{{name}}.erl"}.

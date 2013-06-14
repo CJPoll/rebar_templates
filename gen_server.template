@@ -1,0 +1,3 @@
+{variables, [
+		{name, "template"}]}.
+{template, "gen_server.erl", "./{{name}}.erl"}.
