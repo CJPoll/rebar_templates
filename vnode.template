@@ -1,0 +1,3 @@
+{variables, [
+		{name, "name"}]}.
+{template, "vnode.erl", "./{{name}}_vnode.erl"}.
