@@ -10,25 +10,26 @@
 		code_change/4]).
 
 %%% State Exports
--export([]).
+-export([{{state1}}/2]).
 
 -define(PRINT(FString, Args), io:format(FString, Args)).
 
 init(Arg) ->
-	StateName = somestate,
-	StateData = somedata,
-	{ok, StateName, StateData}.
+	{ok, {{state1}}, StateData}.
+
+{{state1}}(_Event, StateData) ->
+	{next_state, {{state1}}, StateData}.
 
 handle_event(_Event, StateName, StateData) ->
-	{nextState, StateName, StateData}.
+	{next_state, {{state1}}, StateData}.
 
 handle_sync_event(Event, From, StateName, StateData) ->
 	% The reply can be whatever; this is just to avoid compiler warnings.
 	Reply = Event,
-	{reply, Reply, StateName, StateData}.
+	{reply, Reply, {{state1}}, StateData}.
 
 handle_info(_Info, StateName, StateData) ->
-	{next_state, StateName, StateData).
+	{next_state, {{state1}}, StateData}.
 
 terminate(Reason, StateName, StateData) ->
 	?PRINT("Terminated for reason: ~p in state: ~p with data: ~p~n",

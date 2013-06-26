@@ -1,4 +1,4 @@
--module({{name}}).
+-module({{name}}_sup).
 -behavior(supervisor).
 
 %%% Callback Exports
