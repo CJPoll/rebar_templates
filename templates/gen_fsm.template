@@ -1,4 +1,7 @@
 {variables, [
-	{name, "template"},
-	{state1, "state1"}]}.
+	{name, "template"}
+	,{state1, "state1"}
+	,{author, "Cody Poll"}
+	,{year, "2013"}
+	]}.
 {template, "gen_fsm.erl", "./{{name}}.erl"}.

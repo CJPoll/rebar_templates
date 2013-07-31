@@ -1,0 +1,49 @@
+#!/bin/bash - 
+#===============================================================================
+#
+#          FILE: setup_app.sh
+# 
+#         USAGE: ./setup_app.sh 
+# 
+#   DESCRIPTION: A script that generates a rebar-style Erlang app.
+# 
+#       OPTIONS: ---
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: Cody Poll (CJPoll), CJPoll@gmail.com
+#  ORGANIZATION: PollSoft
+#       CREATED: 07/19/2013 12:55:11 PM MDT
+#      REVISION:  ---
+#===============================================================================
+
+set -o nounset                              # Treat unset variables as an error
+
+if [ $# -ne 1 ]; then
+	echo "Needs exactly 1 argument - the app name. Don't forget to quote it if it has spaces"
+	exit
+fi
+
+APPNAME=$1
+
+mkdir $APPNAME
+pushd .
+cd $APPNAME
+
+mkdir apps
+mkdir deps
+mkdir rel
+pushd .
+cd apps
+
+mkdir $APPNAME
+cd $APPNAME
+
+rebar create-app appid=$APPNAME
+popd
+
+pushd .
+cd rel
+
+rebar create-node appid=$APPNAME nodeid=$APPNAME
+popd
