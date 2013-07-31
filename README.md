@@ -1,9 +1,9 @@
-rebar_templates
+#rebar\_templates
 ===============
 
 A group of rebar templates that include the standard OTP behaviors.
 
-The setup_app script sets up a skeleton for an app with the following directory
+The setup\_app script sets up a skeleton for an app with the following directory
 structure:
 
 -root
