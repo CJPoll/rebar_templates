@@ -8,3 +8,5 @@
 %%% ============================================================================
 -module({{name}}).
 
+% Example callback definition:
+%-callback function_name(type(), type()) -> {ok, any()} | {error, any()}
