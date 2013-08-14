@@ -1,0 +1,6 @@
+{variables [
+		{name, "template"}
+		,{author, "Cody Poll"}
+		,{year, "2013"}
+	]}.
+{template, "behavior.erl", "./{{name}}.erl"}
