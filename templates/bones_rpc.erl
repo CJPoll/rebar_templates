@@ -1,8 +1,10 @@
-%% @author {{author}}
-%% @copyright {{year}}
-%% @doc This is placeholder documentation. You should probably replace it with a
-%% good description of what this bones_rpc_handler is for
-%% @version 0.1
+%%% ============================================================================
+%%% @author {{author}}
+%%% @copyright {{year}}
+%%% @doc This is placeholder documentation. You should probably replace it with a
+%%% good description of what this bones_rpc_handler is for
+%%% @version 0.1
+%%% ============================================================================
 -module({{name}}_bones_rpc_handler).
 -behavior(bones_rpc_handler).
 
@@ -15,9 +17,13 @@
 	,bones_rpc_terminate/3
 	]).
 
+
+
 %%%=============================================================================
 %%% Callback Functions
 %%%=============================================================================
+
+
 
 -type req() :: {bones_rpc:msg_id(), bones_rpc:method(), bones_rpc:params()} |
 	{bones_rpc:method(), bones_rpc:params()}.
@@ -71,3 +77,9 @@ bones_rpc_info(_Info, State) ->
 -spec bones_rpc_terminate(Reason::term(), Req::req(), State::any()) -> term().
 bones_rpc_terminate(_Reason, _Req, _State) ->
 	ok.
+
+
+
+%%% ============================================================================
+%%% Private / Internal Functions
+%%% ============================================================================
