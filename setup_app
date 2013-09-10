@@ -6,7 +6,7 @@
 #         USAGE: ./setup_app.sh 
 # 
 #   DESCRIPTION: A script that generates a rebar-style Erlang app.
-# 
+#                                               
 #       OPTIONS: ---
 #  REQUIREMENTS: ---
 #          BUGS: ---
@@ -40,6 +40,8 @@ mkdir $APPNAME
 cd $APPNAME
 
 rebar create-app appid=$APPNAME
+cd src
+touch $APPNAME.hrl
 popd
 
 pushd .
