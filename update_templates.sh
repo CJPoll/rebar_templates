@@ -23,4 +23,3 @@ if [ ! -d ~/.rebar/templates ]; then
 	mkdir -p ~/.rebar/templates
 fi
 cp ./templates/* ~/.rebar/templates
-sudo cp setup_app /usr/local/bin/
