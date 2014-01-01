@@ -128,6 +128,15 @@ handle_info(_Info, StateName, StateData) ->
 %% @end
 %% @private
 %% =============================================================================
+-spec terminate(reason(), atom(), any()) -> ignored.
+terminate(_Reason, _StateName, _StateData) ->
+	ok.
+
+%% =============================================================================
+%% @doc Updates internal state during a release upgrade/downgrade.
+%% @end
+%% @private
+%% =============================================================================
 -spec code_change(any(), atom(), any(), any()) -> 
 	{ok, state_name(), state_data()}.
 code_change(_OldVsn, StateName, StateData, _Extra) ->
