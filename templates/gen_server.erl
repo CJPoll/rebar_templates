@@ -1,8 +1,8 @@
 %%% ============================================================================
 %%% @author {{author}}
 %%% @copyright {{year}}
-%%% @doc 
-%%% 
+%%% @doc This is placeholder documentation. You should probably replace it with
+%%% a good description of what this gen_server is for.
 %%% @end
 %%% @version 0.1
 %%% ============================================================================
@@ -38,7 +38,7 @@
 %% =============================================================================
 -spec start_link() -> {ok, pid()}.
 start_link() ->
-	{ok, _Pid} = gen_server:start_link().
+	{ok, _Pid} = gen_server:start_link(?MODULE, [], []).
 
 
 
