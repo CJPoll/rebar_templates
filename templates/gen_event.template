@@ -3,4 +3,4 @@
 	,{author, "Cody Poll"}
 	,{year, "2013"}
 	]}.
-{template, "gen_fsm.erl", "./{{name}}.erl"}.
+{template, "gen_event.erl", "./{{name}}.erl"}.

@@ -11,19 +11,21 @@
 
 %%% Callback Exports
 -export([init/1,
-	handle_event/2,
-	handle_call/2,
-	handle_info/2,
-	terminate/2,
-	code_change/3]).
+		handle_event/2,
+		handle_call/2,
+		handle_info/2,
+		terminate/2,
+		code_change/3]).
 
--type reason() :: any().
--type state() :: any().
--type event() :: any().
--type reply() :: any().
+-type reason() 			:: any().
+-type state() 			:: any().
+-type event() 			:: any().
+-type reply() 			:: any().
+-type manager_name()	:: {local, atom()} | {global, term()} | {via, module(), term()}.
 
 %%% API Exports
--export([start_link/0]).
+-export([start_link/0
+		, start_link/1]).
 
 
 
@@ -40,6 +42,10 @@
 -spec start_link() -> {ok, pid()}.
 start_link() ->
 	{ok, _Pid} = gen_event:start_link().
+
+-spec start_link(manager_name()) -> {ok, pid()}.
+start_link(Name) ->
+	{ok, _Pid} = gen_event:start_link(Name).
 
 
 
