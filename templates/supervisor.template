@@ -3,6 +3,6 @@
 		,{restart, "one_for_one"}
 		,{child, "achild"}
 		,{author, "Cody Poll"}
-		,{year, "2013"}
+		,{year, "2014"}
 	]}.
 {template, "supervisor.erl", "./{{name}}_sup.erl"}.
