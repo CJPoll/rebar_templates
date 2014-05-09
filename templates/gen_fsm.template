@@ -2,6 +2,6 @@
 	{name, "template"}
 	,{state1, "state1"}
 	,{author, "Cody Poll"}
-	,{year, "2013"}
+	,{year, "2014"}
 	]}.
 {template, "gen_fsm.erl", "./{{name}}.erl"}.

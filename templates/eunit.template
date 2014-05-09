@@ -1,6 +1,6 @@
 {variables, [
 	{name, "tests"}
 	,{author, "Cody Poll"}
-	,{year, "2013"}
+	,{year, "2014"}
 	]}.
 {template, "eunit.erl", "./{{name}}_tests.erl"}.

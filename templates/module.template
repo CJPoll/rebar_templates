@@ -1,6 +1,6 @@
 {variables, [
 	{name, "module"}
 	,{author, "Cody Poll"}
-	,{year, "2013"}
+	,{year, "2014"}
 	]}.
 {template, "module.erl", "./{{name}}.erl"}.

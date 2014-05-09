@@ -1,6 +1,6 @@
 {variables, [
 	{name, "template"}
 	,{author, "Cody Poll"}
-	,{year, "2013"}
+	,{year, "2014"}
 	]}.
 {template, "gen_event.erl", "./{{name}}.erl"}.
