@@ -3,4 +3,4 @@
 	,{author, "Cody Poll"}
 	,{year, "2015"}
 	]}.
-{template, "eunit.erl", "./{{name}}_tests.erl"}.
+{template, "test.erl", "./{{name}}_tests.erl"}.

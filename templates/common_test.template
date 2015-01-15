@@ -1,5 +1,5 @@
 {variables, [
 	{name, "template"}
 	,{author, "Cody Poll"}
-	,{year, "2014"}]}.
+	,{year, "2015"}]}.
 {template, "common_test.erl", "./{{name}}_SUITE.erl"}.
