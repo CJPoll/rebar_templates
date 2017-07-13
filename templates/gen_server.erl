@@ -10,7 +10,7 @@
 -behavior(gen_server).
 
 %%% Callback Exports
--export([init/1, 
+-export([init/1,
 	handle_call/3,
 	handle_cast/2,
 	terminate/2,
@@ -64,13 +64,13 @@ init(_Arg) ->
 %% @private
 %% =============================================================================
 -spec handle_call(any, {pid(), any()}, any()) ->
-	{reply,reply(),state()} 
+	{reply,reply(),state()}
 	| {reply,reply(),state(),timeout()}
 	| {reply,reply(),state(),hibernate}
-	| {noreply,state()} 
+	| {noreply,state()}
 	| {noreply,state(),timeout()}
 	| {noreply,state(),hibernate}
-	| {stop,reason(),reply(),state()} 
+	| {stop,reason(),reply(),state()}
 	| {stop,reason(),state()}.
 handle_call(_Request, _From, State) ->
 	Reply = placeholder_reply,
@@ -82,7 +82,7 @@ handle_call(_Request, _From, State) ->
 %% @private
 %% =============================================================================
 -spec handle_cast(any(), any()) ->
-	{noreply,state()} 
+	{noreply,state()}
 	| {noreply,state(),timeout()}
 	| {noreply,state(),hibernate}
 	| {stop,reason(),state()}.
@@ -96,8 +96,8 @@ handle_cast(_Request, State) ->
 %% @private
 %% =============================================================================
 -spec handle_info(any(), any()) ->
-	{noreply,state()} 
-	| {noreply,state(),timeout()} 
+	{noreply,state()}
+	| {noreply,state(),timeout()}
 	| {noreply,state(),hibernate}
 	| {stop,reason(),state()}.
 handle_info(_Info, State) ->
@@ -117,8 +117,8 @@ terminate(_Reason, _State) ->
 %% @end
 %% @private
 %% =============================================================================
--spec code_change(any(), atom(), any()) -> 
-	{ok, state()} 
+-spec code_change(any(), atom(), any()) ->
+	{ok, state()}
 	| {error, reason()}.
 code_change(_OldVsn, State, _Extra) ->
 	{ok, State}.

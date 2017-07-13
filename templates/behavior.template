@@ -1,6 +1,5 @@
 {variables, [
 		{name, "template"}
 		,{author, "Cody Poll"}
-		,{year, "2015"}
 	]}.
 {template, "behavior.erl", "./{{name}}.erl"}.

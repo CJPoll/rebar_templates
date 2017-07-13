@@ -1,8 +1,8 @@
 %%% ============================================================================
 %%% @author {{author}}
-%%% @copyright {{year}}
-%%% @doc 
-%%% 
+%%% @copyright {{copyright_year}}
+%%% @doc This is placeholder documentation for your behaviour. You should
+%%% probably replace it with something meaningful.
 %%% @end
 %%% @version 0.1
 %%% ============================================================================
